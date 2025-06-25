@@ -1,0 +1,40 @@
+.volume-div {
+  position: relative;
+  margin-left: 0.5rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    145deg,
+    var(--surface-light-purple),
+    var(--primary-deep-purple)
+  );
+  box-shadow: 4px 4px 10px #1a1125, -4px -4px 10px #4e3c6a,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.volume-div::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 50%;
+  background-image: url(../../../assets/Vinyl.png);
+  background-size: cover;
+  box-shadow: -6px -6px 12px rgba(78, 60, 106, 0.5),
+    6px 6px 12px rgba(26, 17, 37, 0.8);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.record-playing {
+  animation: rotate 2s linear infinite;
+}
