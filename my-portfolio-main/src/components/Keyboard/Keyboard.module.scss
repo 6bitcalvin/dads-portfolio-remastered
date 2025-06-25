@@ -1,0 +1,118 @@
+.keyboard {
+  display: flex;
+  align-items: flex-end;
+  max-width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 75px;
+  border: 1px solid rgba(171, 152, 217, 0.2);
+  border-radius: 24px;
+  padding: 1rem;
+  background-color: rgba(44, 31, 62, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  overflow: hidden;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  .keyboard-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-right: 1px solid rgba(171, 152, 217, 0.2);
+    margin-right: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 21rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .keyboard-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 90px;
+    margin-left: 0.25rem;
+  }
+
+  .key:hover {
+    cursor: pointer;
+  }
+
+  .key {
+    margin-right: 0.5rem;
+  }
+
+  .row {
+    margin: 0.25rem 0;
+  }
+
+  .volume-row {
+    display: flex;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(171, 152, 217, 0.2);
+  }
+}
+
+.key {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    var(--surface-light-purple),
+    var(--primary-deep-purple)
+  );
+  box-shadow: 4px 4px 10px #1a1125, -4px -4px 10px #4e3c6a,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  color: var(--text-secondary);
+}
+
+.highlight {
+  background: linear-gradient(
+    145deg,
+    var(--highlight-cta-magenta),
+    var(--primary-accent-lavender)
+  );
+  color: var(--primary-deep-purple);
+  box-shadow: 4px 4px 15px rgba(224, 176, 255, 0.2), -4px -4px 15px #1a1125,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.light {
+  background: linear-gradient(
+    145deg,
+    #5d4f73,
+    var(--surface-light-purple)
+  );
+  color: var(--text-light);
+}
+
+.enter-key {
+  width: 140px;
+}
+
+.shift-key {
+  width: 170px;
+}
+
+.backspace-key {
+  width: 115px;
+}
+
+.key-content {
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: fit-content;
+}

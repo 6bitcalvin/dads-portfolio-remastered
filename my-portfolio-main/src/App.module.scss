@@ -1,0 +1,30 @@
+:root {
+  --primary-deep-purple: #2c1f3e;
+  --background-darker-purple: #1a1125;
+  --surface-light-purple: #3a2d51;
+  --primary-accent-lavender: #ab98d9;
+  --highlight-cta-magenta: #e0b0ff;
+  --text-light: #f5f0ff;
+  --text-secondary: #c9bfe4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-darker-purple);
+  color: var(--text-light);
+  overflow: hidden;
+  /* Add a subtle grid pattern to the background */
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 20px 20px;
+}
